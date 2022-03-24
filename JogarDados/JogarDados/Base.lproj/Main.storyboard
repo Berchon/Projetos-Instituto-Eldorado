@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SS7-pd-Dex">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Jogar dados-->
+        <scene sceneID="iQD-HK-ybW">
+            <objects>
+                <viewController id="L3d-xI-LTi" customClass="ViewController" customModule="JogarDados" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="grH-qh-gDa" customClass="view">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="zqx-sq-1bW">
+                                <rect key="frame" x="79" y="315.5" width="256.5" height="265.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você tirou o número" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5i9-N3-9PF">
+                                        <rect key="frame" x="0.0" y="0.0" width="256.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iay-n1-Mzm">
+                                        <rect key="frame" x="0.0" y="86" width="256.5" height="179.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="iay-n1-Mzm" secondAttribute="bottom" id="Co0-N7-Ulz"/>
+                                    <constraint firstAttribute="trailing" secondItem="5i9-N3-9PF" secondAttribute="trailing" id="Dfx-x1-3ho"/>
+                                    <constraint firstItem="5i9-N3-9PF" firstAttribute="top" secondItem="zqx-sq-1bW" secondAttribute="top" id="TNm-yq-RJj"/>
+                                    <constraint firstItem="iay-n1-Mzm" firstAttribute="leading" secondItem="zqx-sq-1bW" secondAttribute="leading" id="YzX-om-jML"/>
+                                    <constraint firstItem="5i9-N3-9PF" firstAttribute="leading" secondItem="zqx-sq-1bW" secondAttribute="leading" id="j88-nu-Au8"/>
+                                    <constraint firstAttribute="trailing" secondItem="iay-n1-Mzm" secondAttribute="trailing" id="wiQ-6V-gya"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75q-k7-7OH">
+                                <rect key="frame" x="20" y="722" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="A23-G4-YGh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Jogar Dados"/>
+                                <connections>
+                                    <action selector="jogar:" destination="L3d-xI-LTi" eventType="touchUpInside" id="qEU-fI-OJg"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dados-vermelhos-translúcidos" translatesAutoresizingMaskIntoConstraints="NO" id="5lJ-4g-2Ih">
+                                <rect key="frame" x="-95" y="25" width="414" height="308"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="308" id="75h-VL-0bI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xuX-nd-uvl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5lJ-4g-2Ih" firstAttribute="leading" secondItem="grH-qh-gDa" secondAttribute="leading" constant="-95" id="1wF-KD-5Ns"/>
+                            <constraint firstItem="5lJ-4g-2Ih" firstAttribute="top" secondItem="grH-qh-gDa" secondAttribute="top" constant="25" id="6vS-JW-7eS"/>
+                            <constraint firstItem="5lJ-4g-2Ih" firstAttribute="top" secondItem="grH-qh-gDa" secondAttribute="top" constant="25" id="9Ws-KA-6RS"/>
+                            <constraint firstItem="5lJ-4g-2Ih" firstAttribute="top" secondItem="grH-qh-gDa" secondAttribute="top" constant="25" id="EWX-Hd-pn7"/>
+                            <constraint firstItem="xuX-nd-uvl" firstAttribute="bottom" secondItem="75q-k7-7OH" secondAttribute="bottom" constant="80" id="GRp-Pj-vOx"/>
+                            <constraint firstItem="xuX-nd-uvl" firstAttribute="trailing" secondItem="5lJ-4g-2Ih" secondAttribute="trailing" constant="95" id="KlM-UE-tvs"/>
+                            <constraint firstItem="75q-k7-7OH" firstAttribute="leading" secondItem="xuX-nd-uvl" secondAttribute="leading" constant="20" id="eDD-qe-8PL"/>
+                            <constraint firstItem="zqx-sq-1bW" firstAttribute="centerY" secondItem="grH-qh-gDa" secondAttribute="centerY" id="gMw-vJ-Ux0"/>
+                            <constraint firstItem="zqx-sq-1bW" firstAttribute="centerX" secondItem="grH-qh-gDa" secondAttribute="centerX" id="hNE-cO-eHo"/>
+                            <constraint firstItem="xuX-nd-uvl" firstAttribute="trailing" secondItem="75q-k7-7OH" secondAttribute="trailing" constant="20" id="j6q-3A-5p6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Jogar dados" id="tDL-Mo-fSD">
+                        <barButtonItem key="rightBarButtonItem" image="gearshape" catalog="system" id="TwM-aL-VP6">
+                            <connections>
+                                <segue destination="dCu-HQ-bS0" kind="show" identifier="configuracoes" id="lF6-UC-E5E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="numeroSorteado" destination="iay-n1-Mzm" id="8Zc-6l-N2v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhU-YL-V5Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1142.0289855072465" y="-7.3660714285714279"/>
+        </scene>
+        <!--Configurações-->
+        <scene sceneID="XiU-eg-kQM">
+            <objects>
+                <viewController id="dCu-HQ-bS0" customClass="ConfigurationViewController" customModule="JogarDados" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5O6-8G-EQc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-dados" translatesAutoresizingMaskIntoConstraints="NO" id="SHx-T9-d4X">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informe o número de lados do Dado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFn-aE-ksP">
+                                <rect key="frame" x="20" y="133" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sE-05-IGv">
+                                <rect key="frame" x="20" y="722" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Dmp-EK-aMA"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Aplicar"/>
+                                <connections>
+                                    <action selector="aplicar:" destination="dCu-HQ-bS0" eventType="touchUpInside" id="zW8-J7-DIU"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Ng-bE-j2y">
+                                <rect key="frame" x="20" y="174" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bpt-do-BBD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SHx-T9-d4X" firstAttribute="leading" secondItem="bpt-do-BBD" secondAttribute="leading" id="6TX-Wl-CYg"/>
+                            <constraint firstItem="SHx-T9-d4X" firstAttribute="top" secondItem="5O6-8G-EQc" secondAttribute="top" id="7aG-BR-VfF"/>
+                            <constraint firstItem="SHx-T9-d4X" firstAttribute="trailing" secondItem="bpt-do-BBD" secondAttribute="trailing" id="FqO-2u-LS0"/>
+                            <constraint firstItem="2sE-05-IGv" firstAttribute="leading" secondItem="bpt-do-BBD" secondAttribute="leading" constant="20" id="Ijg-Hu-qLX"/>
+                            <constraint firstItem="bpt-do-BBD" firstAttribute="bottom" secondItem="2sE-05-IGv" secondAttribute="bottom" constant="80" id="NZg-Y0-GaR"/>
+                            <constraint firstItem="0Ng-bE-j2y" firstAttribute="top" secondItem="XFn-aE-ksP" secondAttribute="bottom" constant="20" id="Zpm-5O-GBx"/>
+                            <constraint firstAttribute="bottom" secondItem="SHx-T9-d4X" secondAttribute="bottom" id="fXA-67-aLJ"/>
+                            <constraint firstItem="XFn-aE-ksP" firstAttribute="leading" secondItem="bpt-do-BBD" secondAttribute="leading" constant="20" id="gPO-Wm-IHC"/>
+                            <constraint firstItem="bpt-do-BBD" firstAttribute="trailing" secondItem="0Ng-bE-j2y" secondAttribute="trailing" constant="20" id="hg9-Hb-k78"/>
+                            <constraint firstItem="0Ng-bE-j2y" firstAttribute="leading" secondItem="bpt-do-BBD" secondAttribute="leading" constant="20" id="nEi-4U-Yh2"/>
+                            <constraint firstItem="bpt-do-BBD" firstAttribute="trailing" secondItem="XFn-aE-ksP" secondAttribute="trailing" constant="20" id="taH-8T-Kv6"/>
+                            <constraint firstItem="XFn-aE-ksP" firstAttribute="top" secondItem="bpt-do-BBD" secondAttribute="top" constant="45" id="wpq-nT-CPa"/>
+                            <constraint firstItem="bpt-do-BBD" firstAttribute="trailing" secondItem="2sE-05-IGv" secondAttribute="trailing" constant="20" id="wyf-Vm-RFV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Configurações" id="Q7e-Gt-t7O"/>
+                    <connections>
+                        <outlet property="numeroDeLadosDoDado" destination="0Ng-bE-j2y" id="Tw1-OA-TWd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dab-ZH-qbp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-307.24637681159425" y="-7.3660714285714279"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ngl-3O-7Uc">
+            <objects>
+                <navigationController id="SS7-pd-Dex" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3pn-NS-1av">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="L3d-xI-LTi" kind="relationship" relationship="rootViewController" id="gHN-w1-38Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xpB-2J-YPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2007" y="-7"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dados-vermelhos-translúcidos" width="800" height="600"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="image-dados" width="1048" height="1038"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
